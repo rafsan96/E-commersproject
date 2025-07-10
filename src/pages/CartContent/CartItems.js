@@ -50,7 +50,7 @@ const CartItems = () => {
         <div className="cart-total-checkout">
           <article>
             <h3>
-              Order Total : <span>${total}</span>
+              Order Total : <span>৳{total}</span>
             </h3>
           </article>
           <StripePay price={total} />

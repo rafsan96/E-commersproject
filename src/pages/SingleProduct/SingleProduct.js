@@ -25,7 +25,7 @@ const SingleProduct = () => {
               <span class="fa fa-star review"></span>
               <span class="fa fa-star-half-o review"></span>
               <p>60 Reviews</p>
-              <h5 className="price-prod">${price}</h5>
+              <h5 className="price-prod">৳{price}</h5>
               <p className="description"> {description}</p>
               <p className="info-prod">
                 <span>Available : </span>

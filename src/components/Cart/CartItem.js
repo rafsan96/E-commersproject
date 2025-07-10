@@ -28,7 +28,7 @@ const CartItem = React.memo(function CartItem({
         inc={() => increase(id)}
         dec={() => decrease(id)}
       />
-      <h5 className="subtotal">${price * amount}</h5>
+      <h5 className="subtotal">৳{price * amount}</h5>
       <button type="button" className="remove-btn" onClick={() => remove(id)}>
         <i className="fa fa-trash"></i>
       </button>

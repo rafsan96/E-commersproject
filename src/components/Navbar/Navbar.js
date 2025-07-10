@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <div className="nav">
       <div className="nav-container">
-        <h1>Trends</h1>
+        <h1>eTech</h1>
 
         <ul className="links">
           <Link to="/">
@@ -19,6 +19,12 @@ export default function Navbar() {
           </Link>
           <Link to="/products">
             <li>Products</li>
+          </Link>
+          <Link to="/about">
+            <li>About</li>
+          </Link>
+          <Link to="/contact">
+            <li>Contact</li>
           </Link>
         </ul>
 

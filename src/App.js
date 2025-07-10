@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Spinner from "./components/Spinner/Spinner";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 const Cart = lazy(() => import("./pages/CartContent/CartItems"));
 const Homepage = lazy(() => import("./pages/Home/Home"));
@@ -20,6 +22,8 @@ export default function App() {
           <Route exact path="/" component={Homepage}></Route>
           <Route exact path="/cart" component={Cart}></Route>
           <Route exact path="/products" component={Productlist}></Route>
+           <Route exact path="/about" component={About}></Route>
+            <Route exact path="/contact" component={Contact}></Route>
           <Route
             exact
             path="/products/:id"

@@ -1,8 +1,9 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
+import pement from '../Checkout/Laptop-Wallpapers-HD-Free-Download-Images-1.jpg';
 
 const StripePay = React.memo(function StripePay({ price }) {
-  const priceForStripe = price * 100;
+  const priceForStripe = price * 100; // Stripe uses the smallest currency unit (poisha for BDT)
   const publishableKey = "pk_test_51HsoAjDW9ZmubhRmS7JqNrP6ZNf8qx9DcNyUYfb7QTZmruBucwvItOEPhaUvOyuddJbLe3KeEbZYNTminM2X5pP600VZshyn1S";
 
   const onToken = (token) => {
@@ -13,12 +14,13 @@ const StripePay = React.memo(function StripePay({ price }) {
   return (
     <StripeCheckout
       label="Pay Now"
-      name="Trends Clothing"
+      name="eTech"
       billingAddress
       shippingAddress
-      image="https://svgshare.com/i/CUz.svg"
-      description={`Your total is $${price}`}
+      image={pement}
+      description={`Your total is ৳ ${price}`}
       amount={priceForStripe}
+      currency="BDT" // ✅ Corrected: Set currency to Bangladeshi Taka
       panelLabel="Pay Now"
       token={onToken}
       stripeKey={publishableKey}
