@@ -1,0 +1,59 @@
+.filters-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.filter-card {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  min-width: 250px;
+  text-align: center;
+}
+
+.filter-btn {
+  margin: 0.25rem;
+  padding: 0.4rem 1rem;
+  border: 2px solid #17252a;
+  background: white;
+  color: #17252a;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #17252a;
+  color: white;
+}
+
+.best-seller-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.best-seller-tag {
+  display: inline-block;
+  background-color: gold;
+  color: #000;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  margin-top: 0.25rem;
+}
+
+.no-products {
+  text-align: center;
+  color: gray;
+  width: 100%;
+}

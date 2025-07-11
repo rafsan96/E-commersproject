@@ -1,5 +1,3 @@
-// src/data/data.js (or your relevant path)
-
 import Laptop1 from "./data_content/Laptop1.webp";
 import Laptop2 from "./data_content/Laptop2.webp";
 import Laptop3 from "./data_content/Laptop3.webp";
@@ -36,12 +34,12 @@ const data = [
     price: 75000,
     image: Laptop1,
     company: "HP",
-    description:
-      "The HP Pavilion 15 offers a sleek design, 11th Gen Intel Core i5 processor, 8GB RAM, and a 512GB SSD. Ideal for multitasking, casual gaming, and media editing with a 15.6-inch Full HD display and long battery life.",
+    description: "The HP Pavilion 15 offers a sleek design...",
     category: "laptop",
     shipping: true,
     amount: 1,
     stock: 4,
+    bestSeller: true,
   },
   {
     id: "2",
@@ -49,8 +47,7 @@ const data = [
     price: 98000,
     image: Laptop2,
     company: "HP",
-    description:
-      "The HP Envy x360 is a 2-in-1 convertible laptop featuring a Ryzen 5 processor, 16GB RAM, 512GB SSD, and a vibrant touchscreen. Perfect for creative professionals and students needing flexibility and power.",
+    description: "The HP Envy x360 is a 2-in-1 convertible laptop...",
     category: "laptop",
     shipping: true,
     amount: 1,
@@ -62,12 +59,12 @@ const data = [
     price: 125000,
     image: Laptop3,
     company: "HP",
-    description:
-      "The Spectre x360 is a premium ultrabook with an Intel i7 processor, 16GB RAM, 1TB SSD, and a 4K AMOLED touchscreen. It offers excellent performance, pen support, and a durable all-metal body.",
+    description: "The Spectre x360 is a premium ultrabook...",
     category: "laptop",
     shipping: true,
     amount: 1,
     stock: 4,
+    bestSeller: true,
   },
   {
     id: "13",
@@ -75,8 +72,7 @@ const data = [
     price: 78000,
     image: Laptop4,
     company: "Dell",
-    description:
-      "Dell Inspiron 14 is a versatile laptop with Intel Core i5 12th Gen processor, 8GB RAM, and 512GB SSD. Lightweight, efficient, and ideal for students and professionals.",
+    description: "Dell Inspiron 14 is a versatile laptop...",
     category: "laptop",
     shipping: true,
     amount: 1,
@@ -88,8 +84,7 @@ const data = [
     price: 88000,
     image: Laptop5,
     company: "Asus",
-    description:
-      "The Asus Vivobook S15 comes with a vibrant OLED display, 16GB RAM, Intel i5 processor, and a sleek design for immersive content creation and daily productivity.",
+    description: "The Asus Vivobook S15 comes with a vibrant OLED display...",
     category: "laptop",
     shipping: true,
     amount: 1,
@@ -101,8 +96,7 @@ const data = [
     price: 72000,
     image: Laptop6,
     company: "Lenovo",
-    description:
-      "Lenovo IdeaPad Slim 5 offers Ryzen 7 processor, 16GB RAM, and 512GB SSD. Known for solid build quality and long battery life with a 14-inch FHD screen.",
+    description: "Lenovo IdeaPad Slim 5 offers Ryzen 7 processor...",
     category: "laptop",
     shipping: true,
     amount: 1,
@@ -116,8 +110,7 @@ const data = [
     price: 70,
     image: Mouse1,
     company: "Logitech",
-    description:
-      "The Logitech M330 Silent Plus is a wireless mouse offering ultra-quiet clicks, ergonomic shape, 2.4GHz wireless connectivity, and long battery life. Ideal for office work and quiet environments.",
+    description: "Ultra-quiet wireless mouse with ergonomic design.",
     category: "mouse",
     shipping: true,
     amount: 1,
@@ -129,12 +122,12 @@ const data = [
     price: 80,
     image: Mouse2,
     company: "Razer",
-    description:
-      "The Razer DeathAdder Essential is a gaming mouse with a 6400 DPI optical sensor, durable mechanical switches, and a comfortable grip. Designed for accuracy and long gaming sessions.",
+    description: "Gaming mouse with 6400 DPI sensor.",
     category: "mouse",
     shipping: true,
     amount: 1,
     stock: 4,
+    bestSeller: true,
   },
   {
     id: "6",
@@ -142,8 +135,7 @@ const data = [
     price: 20,
     image: Mouse3,
     company: "Dell",
-    description:
-      "The Dell MS116 is a wired optical mouse that delivers reliable performance with 1000 DPI sensitivity. Suitable for everyday office and home use with plug-and-play USB connection.",
+    description: "Reliable wired mouse with 1000 DPI.",
     category: "mouse",
     shipping: true,
     amount: 1,
@@ -155,8 +147,7 @@ const data = [
     price: 18,
     image: Mouse4,
     company: "HP",
-    description:
-      "HP X1000 is a compact and stylish wired mouse with 3 buttons, optical sensor, and USB plug-and-play. Perfect for everyday computing.",
+    description: "Stylish wired mouse with optical sensor.",
     category: "mouse",
     shipping: true,
     amount: 1,
@@ -168,12 +159,12 @@ const data = [
     price: 85,
     image: Mouse5,
     company: "Fantech",
-    description:
-      "Fantech UX1 is a high-performance gaming mouse with customizable RGB, up to 10,000 DPI, and ergonomic grip for marathon sessions.",
+    description: "High-DPI RGB gaming mouse with ergonomic grip.",
     category: "mouse",
     shipping: true,
     amount: 1,
     stock: 3,
+    bestSeller: true,
   },
   {
     id: "24",
@@ -181,8 +172,7 @@ const data = [
     price: 22,
     image: Mouse6,
     company: "A4Tech",
-    description:
-      "A4Tech N-70FX features an ergonomic design, optical sensor, and programmable buttons. Reliable and affordable choice for work and gaming.",
+    description: "Ergonomic wired mouse with optical sensor.",
     category: "mouse",
     shipping: true,
     amount: 1,
@@ -196,12 +186,12 @@ const data = [
     price: 40,
     image: Keyboard1,
     company: "Logitech",
-    description:
-      "Logitech K380 is a compact multi-device Bluetooth keyboard compatible with Windows, macOS, Android, and iOS. Offers comfortable typing, long battery life, and sleek portability.",
+    description: "Compact multi-device Bluetooth keyboard.",
     category: "keyboard",
     shipping: true,
     amount: 1,
     stock: 2,
+    bestSeller: true,
   },
   {
     id: "8",
@@ -209,8 +199,7 @@ const data = [
     price: 90,
     image: Keyboard2,
     company: "Redragon",
-    description:
-      "The Redragon K552 mechanical keyboard features red switches, RGB lighting, and a durable metal base. Built for gamers who prefer tactile response and fast key presses.",
+    description: "RGB mechanical keyboard with red switches.",
     category: "keyboard",
     shipping: true,
     amount: 1,
@@ -222,8 +211,7 @@ const data = [
     price: 100,
     image: Keyboard3,
     company: "HP",
-    description:
-      "The HP KM300F is a full-size membrane keyboard with dedicated media keys, soft-touch keystrokes, and an included optical mouse. A budget combo for everyday productivity.",
+    description: "Full-size membrane keyboard with included mouse.",
     category: "keyboard",
     shipping: true,
     amount: 1,
@@ -235,8 +223,7 @@ const data = [
     price: 25,
     image: Keyboard4,
     company: "A4Tech",
-    description:
-      "A4Tech KR-85 is a durable, spill-resistant wired keyboard with smooth key feedback and a full-size layout. Ideal for office and home use.",
+    description: "Durable wired keyboard, spill-resistant.",
     category: "keyboard",
     shipping: true,
     amount: 1,
@@ -248,8 +235,7 @@ const data = [
     price: 85,
     image: Keyboard5,
     company: "Fantech",
-    description:
-      "Fantech MK884 is a mechanical RGB keyboard featuring blue switches and customizable lighting. Built for gaming with anti-ghosting keys.",
+    description: "Mechanical RGB keyboard with blue switches.",
     category: "keyboard",
     shipping: true,
     amount: 1,
@@ -261,12 +247,12 @@ const data = [
     price: 60,
     image: Keyboard6,
     company: "Logitech",
-    description:
-      "The MK270 combo includes a full-size wireless keyboard and mouse with long battery life and reliable 2.4GHz connection. Great for clutter-free setups.",
+    description: "Wireless keyboard and mouse combo with long battery life.",
     category: "keyboard",
     shipping: true,
     amount: 1,
     stock: 4,
+    bestSeller: true,
   },
 
   // ---------- Mobiles ----------
@@ -276,8 +262,7 @@ const data = [
     price: 20000,
     image: Mobile1,
     company: "Samsung",
-    description:
-      "Samsung Galaxy A13 features a 6.6-inch FHD+ display, 50MP quad camera, 5000mAh battery, and Exynos processor. Great for daily use with smooth performance and One UI experience.",
+    description: "6.6-inch FHD+ display, 50MP camera, 5000mAh battery.",
     category: "mobile",
     shipping: true,
     amount: 1,
@@ -289,12 +274,12 @@ const data = [
     price: 22000,
     image: Mobile2,
     company: "Xiaomi",
-    description:
-      "Redmi Note 11 offers a 6.43-inch AMOLED display, Snapdragon 680, 50MP AI quad-camera, 5000mAh battery with 33W fast charging. A balanced budget smartphone for all-round use.",
+    description: "6.43-inch AMOLED display, 50MP camera, Snapdragon 680.",
     category: "mobile",
     shipping: true,
     amount: 1,
     stock: 5,
+    bestSeller: true,
   },
   {
     id: "12",
@@ -302,34 +287,32 @@ const data = [
     price: 18000,
     image: Mobile3,
     company: "Realme",
-    description:
-      "Realme Narzo 50A packs a 6.5-inch display, MediaTek Helio G85, 50MP main camera, and massive 6000mAh battery. Tailored for gaming and multimedia on a budget.",
-    category: "mobile",
-    shipping: true,
-    amount: 1,
-    stock: 5,
-  },
-  {
-    id: "16",
-    name: "Infinix Zero 20",
-    price: 21000,
-    image: Mobile4,
-    company: "Infinix",
-    description:
-      "Infinix Zero 20 features a 6.7-inch AMOLED display, 60MP selfie camera, 4500mAh battery, and Helio G99 chipset. Designed for stylish photography and performance.",
+    description: "6000mAh battery, 50MP camera, MediaTek G85.",
     category: "mobile",
     shipping: true,
     amount: 1,
     stock: 4,
   },
   {
+    id: "16",
+    name: "iPhone 13",
+    price: 90000,
+    image: Mobile4,
+    company: "Apple",
+    description: "iPhone 13 with A15 Bionic chip and dual-camera.",
+    category: "mobile",
+    shipping: true,
+    amount: 1,
+    stock: 2,
+    bestSeller: true,
+  },
+  {
     id: "17",
-    name: "Tecno Camon 20 Pro",
-    price: 19500,
+    name: "Samsung Galaxy S22",
+    price: 95000,
     image: Mobile5,
-    company: "Tecno",
-    description:
-      "Tecno Camon 20 Pro has a 64MP RGBW sensor, 6.67-inch AMOLED display, and Helio G99 processor, offering sleek design and capable photography features.",
+    company: "Samsung",
+    description: "Flagship phone with AMOLED 2X display and Snapdragon 8 Gen 1.",
     category: "mobile",
     shipping: true,
     amount: 1,
@@ -337,12 +320,11 @@ const data = [
   },
   {
     id: "18",
-    name: "Nokia G21",
-    price: 17500,
+    name: "OnePlus Nord CE 2 Lite",
+    price: 28000,
     image: Mobile6,
-    company: "Nokia",
-    description:
-      "Nokia G21 comes with 6.5-inch HD+ display, Unisoc processor, triple camera system, and 5050mAh battery. Focused on reliability and battery longevity.",
+    company: "OnePlus",
+    description: "6.59-inch 120Hz display, 64MP camera, 5000mAh battery.",
     category: "mobile",
     shipping: true,
     amount: 1,

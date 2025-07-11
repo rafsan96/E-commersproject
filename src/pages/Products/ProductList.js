@@ -1,75 +1,81 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useProductsContext } from "../../context/products_context";
 import AddToCart from "../../components/Cart/AddToCart";
 import PageHero from "../../components/PageHero/PageHero";
 import "../../App.css";
+import "./ProductList.css";
 
 const ProductList = () => {
   const { products } = useProductsContext();
   const [category, setCategory] = useState("all");
+  const [maxPrice, setMaxPrice] = useState(150000);
+  const [showBestSeller, setShowBestSeller] = useState(false);
 
   const categories = ["all", "laptop", "mouse", "keyboard", "mobile"];
 
-  const filteredProducts =
-    category === "all"
-      ? products
-      : products.filter(
-          (product) => product.category?.toLowerCase() === category
-        );
+  const filteredProducts = products.filter((product) => {
+    const matchCategory =
+      category === "all" || product.category?.toLowerCase() === category;
+    const matchPrice = product.price <= maxPrice;
+    const matchBestSeller = showBestSeller ? product.bestSeller : true;
+    return matchCategory && matchPrice && matchBestSeller;
+  });
 
   return (
     <>
       <PageHero item={products.length} name="PRODUCTS" />
 
-      {/* Category Filter Card */}
-      <div
-        className="filter-card"
-        style={{
-          maxWidth: "600px",
-          margin: "3rem auto 2rem auto",
-          padding: "1rem 2rem",
-          boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-          borderRadius: "8px",
-          backgroundColor: "#fff",
-          textAlign: "center",
-          display: "flex",
-          justifyContent: "center",
-          gap: "1rem",
-          flexWrap: "wrap",
-        }}
-      >
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setCategory(cat)}
-            className={`filter-btn ${category === cat ? "active" : ""}`}
-            style={{
-              padding: "0.5rem 1rem",
-              background: category === cat ? "#17252A" : "#fff",
-              color: category === cat ? "#fff" : "#17252A",
-              border: "2px solid #17252A",
-              cursor: "pointer",
-              borderRadius: "5px",
-              transition: "0.3s ease",
-              minWidth: "80px",
-              textTransform: "capitalize",
-            }}
-          >
-            {cat}
-          </button>
-        ))}
+      <div className="filters-container">
+        {/* Category Filter */}
+        <div className="filter-card">
+          <h3>Filter by Category</h3>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setCategory(cat)}
+              className={`filter-btn ${category === cat ? "active" : ""}`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Price Filter */}
+        <div className="filter-card">
+          <h3>Filter by Price</h3>
+          <label htmlFor="price-range">
+            Max Price: ৳{maxPrice}
+            <input
+              type="range"
+              id="price-range"
+              min="0"
+              max="150000"
+              step="500"
+              value={maxPrice}
+              onChange={(e) => setMaxPrice(Number(e.target.value))}
+            />
+          </label>
+        </div>
+
+        {/* Best Seller Filter */}
+        <div className="filter-card">
+          <h3>Filter by Best Seller</h3>
+          <label className="best-seller-label">
+            <input
+              type="checkbox"
+              checked={showBestSeller}
+              onChange={() => setShowBestSeller(!showBestSeller)}
+            />
+            Show only best sellers
+          </label>
+        </div>
       </div>
 
-      <div
-        className="cocktails-center"
-        style={{
-          marginTop: "2rem",
-        }}
-      >
+      {/* Product Grid */}
+      <div className="cocktails-center">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => {
-            const { id, image, name, price } = product;
+            const { id, image, name, price, bestSeller } = product;
             return (
               <article key={id} className="cocktail">
                 <div className="img-container">
@@ -79,25 +85,17 @@ const ProductList = () => {
                   <div className="product">
                     <h4>{name}</h4>
                     <h4 className="price">৳{price}</h4>
+                    {bestSeller && (
+                      <span className="best-seller-tag">Best Seller</span>
+                    )}
                   </div>
                   <AddToCart product={product} />
-                  <Link
-                    to={`/products/${id}`}
-                    className="add-cart"
-                    style={{
-                      color: "#17252A",
-                      background: "#fff",
-                      border: "2px solid #17252A",
-                    }}
-                  >
-                    View
-                  </Link>
                 </div>
               </article>
             );
           })
         ) : (
-          <p style={{ textAlign: "center", color: "gray" }}>No products found in this category.</p>
+          <p className="no-products">No products found with current filters.</p>
         )}
       </div>
     </>
