@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -10,12 +11,14 @@ body {
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: #444;
   font-weight: 500;
   font-size: 18px;
 }
+
 .nav {
   color: #444;
 }
@@ -26,23 +29,30 @@ a {
   align-items: center;
   flex-direction: column;
 }
-.links a:hover {
-  border-color: #3aafa9;
-}
+
 .links a {
   border-bottom: 2px solid transparent;
+}
+
+.links a:hover {
+  border-color: #3aafa9;
 }
 
 .links {
   display: flex;
   justify-content: center;
 }
+
 .links li {
   padding: 10px;
 }
 
 .cart-icon {
   margin-left: 10px;
+}
+
+.cart-icon:hover {
+  filter: brightness(150%);
 }
 
 .login {
@@ -54,8 +64,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 20px;
   border: 2px solid transparent;
+  border-radius: 25px; /* Rounded corners */
 }
 
 .login:hover {
@@ -63,22 +74,22 @@ a {
   background-color: transparent;
   border-color: #3aafa9;
 }
-.cart-icon:hover {
-  filter: brightness(150%);
-}
 
 .user {
   display: flex;
   margin-bottom: 2px;
 }
+
 .nav-item {
   display: block;
   position: relative;
 }
+
 nav svg {
   width: 2rem;
   fill: #fff;
 }
+
 .amount-container {
   position: absolute;
   top: -0.68rem;
@@ -91,11 +102,13 @@ nav svg {
   align-items: center;
   justify-content: center;
 }
+
 .total-amount {
   color: #fff;
   margin-bottom: 0;
   font-size: 1.22rem;
 }
+
 .nav h1 {
   color: #3aafa9;
   font-family: cursive;
@@ -110,20 +123,24 @@ nav svg {
     flex-direction: row;
     align-items: center;
   }
-  .links a:hover {
-    border-color: #3aafa9;
-  }
+
   .links a {
     border-bottom: 2px solid transparent;
+  }
+
+  .links a:hover {
+    border-color: #3aafa9;
   }
 
   .links {
     display: flex;
     justify-content: center;
   }
+
   .links li {
     padding: 10px;
   }
+
   .login {
     font-weight: bold;
     color: #fff;
@@ -133,13 +150,14 @@ nav svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 20px;
     border: 2px solid transparent;
+    border-radius: 25px; /* Keep it rounded on larger screens too */
   }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 350px) {
-  .links a:focus{
-    border:none;
+  .links a:focus {
+    border: none;
   }
 }
